@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29bc4191-4554-4d48-9093-ca5a041a885a" name="Default Changelist" comment="Интеграция Git и IDEA [#159462]">
+    <list default="true" id="29bc4191-4554-4d48-9093-ca5a041a885a" name="Default Changelist" comment="Программа &quot;DummyBot&quot; [#170811]">
+      <change afterPath="$PROJECT_DIR$/chapter_001/src/main/java/ru/job4j/condition/DummyBot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter_001/src/test/java/ru/job4j/condition/DummyBotTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job4j" beforeDir="false" afterPath="$PROJECT_DIR$/job4j" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +32,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1PV1hHqM4Y1gVX4ZdtF9tXYIlDb" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ChangesTree.GroupingKeys" value="module&#10;directory" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -54,19 +57,77 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="JUnit.DummyBotTest.whenUnknownBot">
+    <configuration name="DummyBotTest.whenByeBot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chapter_001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.job4j.condition.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.job4j.condition" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.condition.DummyBotTest" />
+      <option name="METHOD_NAME" value="whenByeBot" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DummyBotTest.whenGreetBot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chapter_001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.job4j.condition.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.job4j.condition" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.condition.DummyBotTest" />
+      <option name="METHOD_NAME" value="whenGreetBot" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DummyBotTest.whenUnknownBot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chapter_001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.job4j.condition.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.job4j.condition" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.condition.DummyBotTest" />
+      <option name="METHOD_NAME" value="whenUnknownBot" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DummyBotTest.whenUnknownBot" />
+        <item itemvalue="JUnit.DummyBotTest.whenByeBot" />
+        <item itemvalue="JUnit.DummyBotTest.whenGreetBot" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="29bc4191-4554-4d48-9093-ca5a041a885a" name="Default Changelist" comment="" />
+      <changelist id="" name="Интеграция Git и IDEA [#159462]" comment="" />
       <created>1565944566079</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565944566079</updated>
       <workItem from="1565944568242" duration="4702000" />
       <workItem from="1566069497719" duration="4207000" />
-      <workItem from="1566115227889" duration="1413000" />
+      <workItem from="1566115227889" duration="6274000" />
     </task>
     <task id="LOCAL-00001" summary="Интеграция Git и IDEA [#159462]">
       <created>1566070524118</created>
@@ -89,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566072419574</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Интеграция Git и IDEA [#159462]">
+      <created>1566116849891</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1566116849891</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +178,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Интеграция Git и IDEA [#159462]" />
-    <option name="LAST_COMMIT_MESSAGE" value="Интеграция Git и IDEA [#159462]" />
+    <MESSAGE value="Программа &quot;DummyBot&quot; [#170811]" />
+    <option name="LAST_COMMIT_MESSAGE" value="Программа &quot;DummyBot&quot; [#170811]" />
   </component>
 </project>
