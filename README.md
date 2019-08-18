@@ -1,2 +1,4 @@
 # job4j
-#My first repository
+My first repository
+
+I study IT.

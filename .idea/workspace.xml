@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29bc4191-4554-4d48-9093-ca5a041a885a" name="Default Changelist" comment="" />
+    <list default="true" id="29bc4191-4554-4d48-9093-ca5a041a885a" name="Default Changelist" comment="Интеграция Git и IDEA [#159462]">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job4j" beforeDir="false" afterPath="$PROJECT_DIR$/job4j" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -17,7 +31,10 @@
     </option>
   </component>
   <component name="ProjectId" id="1PV1hHqM4Y1gVX4ZdtF9tXYIlDb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="module&#10;directory" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -48,10 +65,51 @@
       <option name="presentableId" value="Default" />
       <updated>1565944566079</updated>
       <workItem from="1565944568242" duration="4702000" />
+      <workItem from="1566069497719" duration="4207000" />
+      <workItem from="1566115227889" duration="1413000" />
     </task>
+    <task id="LOCAL-00001" summary="Интеграция Git и IDEA [#159462]">
+      <created>1566070524118</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1566070524118</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Интеграция Git и IDEA [#159462]">
+      <created>1566070939304</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1566070939305</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Интеграция Git и IDEA [#159462]">
+      <created>1566072419574</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1566072419574</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Интеграция Git и IDEA [#159462]" />
+    <option name="LAST_COMMIT_MESSAGE" value="Интеграция Git и IDEA [#159462]" />
   </component>
 </project>
