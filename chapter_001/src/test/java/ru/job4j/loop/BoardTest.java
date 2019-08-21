@@ -20,7 +20,7 @@ public class BoardTest {
         Board board = new Board();
         String rsl = board.paint(5,4);
         String ln = System.lineSeparator();
-        String expected = String.format("X X %s X X%sX X %s X X%sX X %s", ln, ln, ln, ln,ln);
+        String expected = String.format("X X X%s X X %sX X X%s X X %s", ln, ln, ln, ln);
         assertThat(rsl,is(expected));
     }
 }
