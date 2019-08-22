@@ -1,5 +1,10 @@
 package ru.job4j.calculator;
 
+/**
+ * Calculator
+ *
+ * @author Viktor Grigoriev (14GameOver@mail.ru)
+ */
 public class Calculator {
     public static void add(double first, double second){
         double result = first + second;
@@ -21,6 +26,10 @@ public class Calculator {
         System.out.println(first + " - " + second + " = " + result);
     }
 
+    /**
+     * Main
+     * @param args - args
+     */
     public static void main(String[] args){
         add(1,1);
         div(4,2);
