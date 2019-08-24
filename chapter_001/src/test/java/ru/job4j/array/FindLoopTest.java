@@ -53,4 +53,21 @@ public class FindLoopTest {
         int result = findLoop.indexOf(input,value,start,finish);
         assertThat(result, is(-1));
     }
+    @Test
+    public void whenSort5(){
+        FindLoop findLoop = new FindLoop();
+        int[] input = new int[]{8,2,5,4,1};
+        int[] result = findLoop.sort(input);
+        int[] expected = new int[] {1,2,4,5,8};
+        assertThat(result, is(expected));
+    }
+
+    @Test
+    public void whenSort3(){
+        FindLoop findLoop = new FindLoop();
+        int[] input = new int[]{3,1,2};
+        int[] result = findLoop.sort(input);
+        int[] expected = new int[] {1,2,3};
+        assertThat(result, is(expected));
+    }
 }
