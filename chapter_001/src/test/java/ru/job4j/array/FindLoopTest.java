@@ -31,4 +31,26 @@ public class FindLoopTest {
         int result = findLoop.indexOf(input,value);
         assertThat(result, is(-1));
     }
+
+    @Test
+    public void whenFind5Then4(){
+        FindLoop findLoop = new FindLoop();
+        int[] input = new int[]{3,8,1,6,5,2};
+        int value = 5;
+        int start = 1;
+        int finish = 4;
+        int result = findLoop.indexOf(input,value,start,finish);
+        assertThat(result, is(4));
+    }
+
+    @Test
+    public void whenFind3ThenMinus1(){
+        FindLoop findLoop = new FindLoop();
+        int[] input = new int[]{3,8,1,6,5,2};
+        int value = 3;
+        int start = 1;
+        int finish = 4;
+        int result = findLoop.indexOf(input,value,start,finish);
+        assertThat(result, is(-1));
+    }
 }
