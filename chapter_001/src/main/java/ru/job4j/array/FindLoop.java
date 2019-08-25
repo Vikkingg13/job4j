@@ -44,11 +44,11 @@ public class FindLoop {
     }
 
     /**
-     * Сортировка элементов массива по возрастанию
+     * Сортировка пузырьком
      * @param data массив чисел
      * @return возращает отсортированный массив
      */
-    public int[] sort(int[] data){
+    public int[] sortBubble(int[] data){
         for (int i=0; i < data.length-1; i++) {
             for (int j = i+1; j < data.length; j++) {
                 if (data[i] > data[j]) {
@@ -61,5 +61,25 @@ public class FindLoop {
         return data;
     }
 
+    /**
+     * Сортировка выборкой
+     * @param data массив чисел
+     * @return возращает отсортированный массив
+     */
+    public int[] sortSelection(int[] data){
+        int value = 0;
+        for (int index=0; index < data.length; index++) {
+            int ind = indexOf(data, value, index, data.length-1);
+            if (ind != -1) {
+                int tmp = data[index];
+                data[index] = data[ind];
+                data[ind] = tmp;
+            } else {
+                index--;
+            }
+            value++;
+        }
+        return data;
+    }
 
 }
