@@ -6,26 +6,26 @@ import static org.junit.Assert.assertThat;
 
 public class SquareTest {
     @Test
-    public void whenBound3Then149(){
+    public void whenBound3Then149() {
         Square square = new Square();
         int[] result = square.calculate(3);
-        int[] expected = new int[]{1,4,9};
+        int[] expected = new int[]{1, 4, 9};
         assertThat(result, is(expected));
     }
 
     @Test
-    public void whenBound5Then1_4_9_16_25(){
+    public void whenBound5Then1491625() {
         Square square = new Square();
         int[] result = square.calculate(5);
-        int[] expected = new int[]{1,4,9,16,25};
+        int[] expected = new int[]{1, 4, 9, 16, 25};
         assertThat(result, is(expected));
     }
 
     @Test
-    public void whenBound7Then1_4_9_16_25_36_49(){
+    public void whenBound7Then14916253649() {
         Square square = new Square();
         int[] result = square.calculate(7);
-        int[] expected = new int[]{1,4,9,16,25,36,49};
+        int[] expected = new int[]{1, 4, 9, 16, 25, 36, 49};
         assertThat(result, is(expected));
     }
 }

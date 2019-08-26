@@ -9,9 +9,9 @@ public class MatrixCheckTest {
     public void whenDataMonoByTrueThenTrue() {
         MatrixCheck check = new MatrixCheck();
         boolean[][] input = new boolean[][]{
-                {true,false,true},
-                {false,true,false},
-                {true,false,true}
+                {true, false, true},
+                {false, true, false},
+                {true, false, true}
         };
         boolean result = check.mono(input);
         assertThat(result, is(true));
@@ -21,9 +21,9 @@ public class MatrixCheckTest {
     public void whenDataMonoByFalseThenTrue() {
         MatrixCheck check = new MatrixCheck();
         boolean[][] input = new boolean[][]{
-                {false,true,false},
-                {true,false,true},
-                {false,true,false}
+                {false, true, false},
+                {true, false, true},
+                {false, true, false}
         };
         boolean result = check.mono(input);
         assertThat(result, is(true));
@@ -33,9 +33,9 @@ public class MatrixCheckTest {
     public void whenDataNotMonoByTrueThenFalse() {
         MatrixCheck check = new MatrixCheck();
         boolean[][] input = new boolean[][]{
-                {false,false,true},
-                {false,true,false},
-                {true,false,true}
+                {false, false, true},
+                {false, true, false},
+                {true, false, true}
         };
         boolean result = check.mono(input);
         assertThat(result, is(false));
@@ -45,8 +45,8 @@ public class MatrixCheckTest {
     public void whenDataMonoByTrueAndFalseThenTrue() {
         MatrixCheck check = new MatrixCheck();
         boolean[][] input = new boolean[][]{
-                {false,true},
-                {true,false}
+                {false, true},
+                {true, false}
         };
         boolean result = check.mono(input);
         assertThat(result, is(true));
@@ -56,8 +56,8 @@ public class MatrixCheckTest {
     public void whenDataNotMonoByTrueAndFalseThenFalse() {
         MatrixCheck check = new MatrixCheck();
         boolean[][] input = new boolean[][]{
-                {false,true},
-                {false,true}
+                {false, true},
+                {false, true}
         };
         boolean result = check.mono(input);
         assertThat(result, is(false));

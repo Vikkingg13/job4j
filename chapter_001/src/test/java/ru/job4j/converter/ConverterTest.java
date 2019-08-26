@@ -4,7 +4,7 @@ import org.junit.Test;
 public class ConverterTest {
 
     @Test
-    public void rubleToEuro(){
+    public void rubleToEuro() {
         int in = 140;
         int expected = 2;
         int out = Converter.rubleToEuro(in);
@@ -12,7 +12,7 @@ public class ConverterTest {
     }
 
     @Test
-    public void rubleToDollar(){
+    public void rubleToDollar() {
         int in = 180;
         int expected = 3;
         int out = Converter.rubleToDollar(in);
@@ -20,7 +20,7 @@ public class ConverterTest {
     }
 
     @Test
-    public void dollarToRuble(){
+    public void dollarToRuble() {
         int in = 5;
         int expected = 300;
         int out = Converter.dollarToRuble(in);

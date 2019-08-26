@@ -6,23 +6,23 @@ import static org.hamcrest.Matchers.is;
 
 public class FitnessTest {
     @Test
-    public void whenIvanGreatNik(){
+    public void whenIvanGreatNik() {
         Fitness fit = new Fitness();
-        int month = fit.calc(95,90);
+        int month = fit.calc(95, 90);
         assertThat(month, is(0));
     }
 
     @Test
-    public void whenIvanLessByOneNik(){
+    public void whenIvanLessByOneNik() {
         Fitness fit = new Fitness();
-        int month = fit.calc(85,95);
+        int month = fit.calc(85, 95);
         assertThat(month, is(1));
     }
 
     @Test
-    public void whenIvanLessByFewNik(){
+    public void whenIvanLessByFewNik() {
         Fitness fit = new Fitness();
-        int month = fit.calc(60,110);
+        int month = fit.calc(60, 110);
         assertThat(month, is(2));
     }
 

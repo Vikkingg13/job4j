@@ -7,37 +7,37 @@ import static org.hamcrest.Matchers.is;
 public class SqMaxTest {
 
     @Test
-    public void whenFirstMax(){
+    public void whenFirstMax() {
         SqMax check = new SqMax();
-        int result = check.max(3,2,1,1);
-        assertThat(result,is(3));
+        int result = check.max(3, 2, 1, 1);
+        assertThat(result, is(3));
     }
 
     @Test
-    public void whenSecondMax(){
+    public void whenSecondMax() {
         SqMax check = new SqMax();
-        int result = check.max(1,2,1,1);
-        assertThat(result,is(2));
+        int result = check.max(1, 2, 1, 1);
+        assertThat(result, is(2));
     }
 
     @Test
-    public void whenThirdMax(){
+    public void whenThirdMax() {
         SqMax check = new SqMax();
-        int result = check.max(1,1,4,3);
-        assertThat(result,is(4));
+        int result = check.max(1, 1, 4, 3);
+        assertThat(result, is(4));
     }
 
     @Test
-    public void whenForthMax(){
+    public void whenForthMax() {
         SqMax check = new SqMax();
-        int result = check.max(3,2,2,5);
-        assertThat(result,is(5));
+        int result = check.max(3, 2, 2, 5);
+        assertThat(result, is(5));
     }
 
     @Test
-    public void whenAreEqual(){
+    public void whenAreEqual() {
         SqMax check = new SqMax();
-        int result = check.max(1,1,1,1);
-        assertThat(result,is(1));
+        int result = check.max(1, 1, 1, 1);
+        assertThat(result, is(1));
     }
 }

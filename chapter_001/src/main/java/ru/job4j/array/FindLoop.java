@@ -15,8 +15,8 @@ public class FindLoop {
      */
     public int indexOf(int[]data, int el) {
         int rsl = -1;
-        for(int i = 0; i < data.length; i++) {
-            if (data[i] == el){
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] == el) {
                 rsl = i;
                 break;
             }
@@ -34,8 +34,8 @@ public class FindLoop {
      */
     public int indexOf(int[]data, int el, int start, int finish) {
         int rsl = -1;
-        for(int i = start; i <= finish; i++){
-            if (data[i] == el){
+        for (int i = start; i <= finish; i++) {
+            if (data[i] == el) {
                 rsl = i;
                 break;
             }
@@ -48,9 +48,9 @@ public class FindLoop {
      * @param data массив чисел
      * @return возращает отсортированный массив
      */
-    public int[] sortBubble(int[] data){
-        for (int i=0; i < data.length-1; i++) {
-            for (int j = i+1; j < data.length; j++) {
+    public int[] sortBubble(int[] data) {
+        for (int i = 0; i < data.length - 1; i++) {
+            for (int j = i + 1; j < data.length; j++) {
                 if (data[i] > data[j]) {
                     int temp = data[i];
                     data[i] = data[j];
@@ -66,10 +66,10 @@ public class FindLoop {
      * @param data массив чисел
      * @return возращает отсортированный массив
      */
-    public int[] sortSelection(int[] data){
+    public int[] sortSelection(int[] data) {
         int value = 0;
-        for (int index=0; index < data.length; index++) {
-            int ind = indexOf(data, value, index, data.length-1);
+        for (int index = 0; index < data.length; index++) {
+            int ind = indexOf(data, value, index, data.length - 1);
             if (ind != -1) {
                 int tmp = data[index];
                 data[index] = data[ind];

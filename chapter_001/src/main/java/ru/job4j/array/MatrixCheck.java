@@ -11,10 +11,10 @@ public class MatrixCheck {
      */
     public boolean mono(boolean[][] data) {
         boolean result = true;
-        int lastIndex = data.length-1;
-        for (int i=0; i<lastIndex; i++) {
-            if (data[i][i] != data[i+1][i+1] ||
-                    data[lastIndex-i][i] != data[(lastIndex-i)-1][i+1]) {
+        int lastIndex = data.length - 1;
+        for (int i = 0; i < lastIndex; i++) {
+            if (data[i][i] != data[i + 1][i + 1]
+                     || data[lastIndex - i][i] != data[(lastIndex - i) - 1][i + 1]) {
                 result = false;
                 break;
             }

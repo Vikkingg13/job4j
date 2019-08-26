@@ -7,20 +7,20 @@ import static org.junit.Assert.assertThat;
 public class BoardTest {
 
     @Test
-    public void when3x3(){
+    public void when3x3() {
         Board board = new Board();
-        String rsl = board.paint(3,3);
+        String rsl = board.paint(3, 3);
         String ln = System.lineSeparator();
         String expected = String.format("X X%s X %sX X%s", ln, ln, ln);
-        assertThat(rsl,is(expected));
+        assertThat(rsl, is(expected));
     }
 
     @Test
-    public void when5x4(){
+    public void when5x4() {
         Board board = new Board();
-        String rsl = board.paint(5,4);
+        String rsl = board.paint(5, 4);
         String ln = System.lineSeparator();
-        String expected = String.format("X X X%s X X %sX X X%s X X %s", ln, ln, ln, ln);
-        assertThat(rsl,is(expected));
+        String expected = String.format("X X X%s X X %sX X X%s X X %s",  ln,  ln,  ln,  ln);
+        assertThat(rsl, is(expected));
     }
 }
