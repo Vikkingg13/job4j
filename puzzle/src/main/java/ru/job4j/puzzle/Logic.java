@@ -77,21 +77,13 @@ public class Logic {
             for (int j = 0; j < table.length; j++) {
                 if (table[i][j] == 1) {
                     counterColumn++;
-                    if (counterColumn == size) {
-                        result = true;
-                    }
-                } else {
-                    counterColumn = 0;
                 }
-
                 if (table[j][i] == 1) {
                     counterRow++;
-                    if (counterRow == size) {
-                        result = true;
-                    }
-                } else {
-                    counterRow = 0;
                 }
+            }
+            if (counterColumn == size || counterRow == size) {
+                result = true;
             }
             counterColumn = 0;
             counterRow = 0;
