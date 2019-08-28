@@ -74,19 +74,21 @@ public class Logic {
         int counterColumn = 0;
         int counterRow = 0;
         for (int i = 0; i < table.length; i++) {
-            for (int j = 0; j < table.length; j++) {
-                if (table[i][j] == 1) {
-                    counterColumn++;
+            if (table[i][i] == 1) {
+                for (int j = 0; j < table.length; j++) {
+                    if (table[i][j] == 1) {
+                        counterColumn++;
+                    }
+                    if (table[j][i] == 1) {
+                        counterRow++;
+                    }
                 }
-                if (table[j][i] == 1) {
-                    counterRow++;
+                if (counterColumn == size || counterRow == size) {
+                    result = true;
+                } else {
+                    break;
                 }
             }
-            if (counterColumn == size || counterRow == size) {
-                result = true;
-            }
-            counterColumn = 0;
-            counterRow = 0;
         }
         return  result;
     }
