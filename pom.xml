@@ -12,6 +12,7 @@
     <modules>
         <module>chapter_001</module>
 		<module>puzzle</module>
+        <module>chapter_002</module>
     </modules>
     <properties>
         <maven.compiler.source>12</maven.compiler.source>
