@@ -24,4 +24,19 @@ public class MaxTest {
         int result = test.max(5, 5);
         assertThat(result, is(5));
     }
+
+    @Test
+    public void whenMaxWithThreeArgs241Then4() {
+        Max test = new Max();
+        int result = test.max(2, 4, 1);
+        assertThat(result, is(4));
+    }
+
+    @Test
+    public void whenMaxWithFourArgs5634Then6() {
+        Max test = new Max();
+        int result = test.max(5, 6, 3, 4);
+        assertThat(result, is(6));
+    }
+
 }
