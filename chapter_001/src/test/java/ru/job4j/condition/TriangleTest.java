@@ -7,7 +7,10 @@ public class TriangleTest {
     @Test
     public void whenAreaSetThreePointsThenTriangleArea() {
         Triangle triangle = new Triangle();
-        double result = triangle.area(0, 0, 3, 0, 2, 2);
+        Point first = new Point(0, 0);
+        Point second = new Point(3, 0);
+        Point third = new Point(2, 2);
+        double result = triangle.area(first, second, third);
         double expected = 3D;
         assertThat(result, closeTo(expected, 0.1));
     }
