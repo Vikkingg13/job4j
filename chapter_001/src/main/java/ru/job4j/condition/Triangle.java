@@ -2,6 +2,16 @@ package ru.job4j.condition;
 
 public class Triangle {
 
+    private Point first;
+    private Point second;
+    private Point third;
+
+    public Triangle(Point ap, Point bp, Point cp) {
+        this.first = ap;
+        this.second = bp;
+        this.third = cp;
+    }
+
     public double period(double a, double b, double c) {
         return (a + b + c) / 2;
     }
@@ -15,7 +25,7 @@ public class Triangle {
         }
 
 
-    public double area(Point first, Point second, Point third) {
+    public double area() {
         double result = -1;
         double a = first.distance(third); //distance is static method
         double b = second.distance(first);
