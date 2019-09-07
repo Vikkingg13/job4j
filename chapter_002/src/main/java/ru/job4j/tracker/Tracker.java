@@ -17,6 +17,7 @@ public class Tracker {
         boolean result = false;
         for (int index = 0; index != position; index++) {
             if (this.items[index] != null && this.items[index].getId().equals(id)) {
+                item.setId(this.items[index].getId());
                 this.items[index] = item;
                 result = true;
                 break;
