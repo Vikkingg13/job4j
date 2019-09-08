@@ -9,7 +9,7 @@ public class TrackerTest {
     @Test
     public void whenAddNewItemThenTrackerHasSameItem() {
         Tracker tracker = new Tracker();
-        Item item = new Item( "test1");
+        Item item = new Item("test1");
         tracker.add(item);
         Item result = tracker.findById(item.getId());
         assertThat(result.getName(), is(item.getName()));
@@ -18,23 +18,22 @@ public class TrackerTest {
     @Test
     public void whenDeleteItemThenNewArray() {
         Tracker tracker = new Tracker();
-        Item first = new Item( "test1");
-        Item second = new Item( "test2");
+        Item first = new Item("test1");
+        Item second = new Item("test2");
         tracker.add(first);
         tracker.add(second);
         tracker.delete(first.getId());
         Item[] result = tracker.getAll();
         Item[] expected = new Item[] {second};
         assertThat(result, is(expected));
-
     }
 
     @Test
     public void whenReplaceNameThenReturnNewName() {
         Tracker tracker = new Tracker();
-        Item previous = new Item( "test1");
+        Item previous = new Item("test1");
         tracker.add(previous);
-        Item next = new Item( "test2");
+        Item next = new Item("test2");
         next.setId(previous.getId());
         tracker.replace(previous.getId(), next);
         assertThat(tracker.findById(previous.getId()).getName(), is("test2"));
@@ -55,9 +54,9 @@ public class TrackerTest {
     @Test
     public void whenArrayHasItemThenFindByNameReturnThisItem() {
         Tracker tracker = new Tracker();
-        Item first = new Item( "test1");
-        Item second = new Item( "test2");
-        Item third = new Item( "test1");
+        Item first = new Item("test1");
+        Item second = new Item("test2");
+        Item third = new Item("test1");
         tracker.add(first);
         tracker.add(second);
         tracker.add(third);
@@ -68,7 +67,7 @@ public class TrackerTest {
     @Test
     public void whenArrayHasItemThenFindByIdReturnThisItem() {
         Tracker tracker = new Tracker();
-        Item item = new Item( "test1");
+        Item item = new Item("test1");
         tracker.add(item);
         Item result = tracker.findById(item.getId());
         assertThat(result, is(item));
@@ -77,8 +76,8 @@ public class TrackerTest {
     @Test
     public void whenArrayNotHaveItemThenFindByIdReturnNull() {
         Tracker tracker = new Tracker();
-        Item item = new Item( "test1");
+        Item item = new Item("test1");
         Item result = tracker.findById(item.getId());
-        assertThat(result, is((Item)null));
+        assertThat(result, is((Item) null));
     }
 }
