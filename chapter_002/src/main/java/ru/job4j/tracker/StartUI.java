@@ -74,7 +74,7 @@ public class StartUI {
         Item item = new Item(name, desc);
         String answer = "---------Заявка с таким ID не найдена---------";
         if (this.tracker.replace(id, item)) {
-            answer = "---------Заявка успешно отредактирована---------";
+            answer = "---------Заявка с getid : " + item.getId() + " успешно отредактирована---------";
         }
         System.out.println(answer);
     }
@@ -83,7 +83,7 @@ public class StartUI {
         String id = this.input.ask("Введите ID заявки для удаления :");
         String answer = "---------Заявка с таким ID не найдена---------";
         if (this.tracker.delete(id)) {
-            answer = "---------Заявка успешно удалена---------";
+            answer = "---------Заявка с getid : " + id + " успешно удалена---------";
         }
         System.out.println(answer);
     }
