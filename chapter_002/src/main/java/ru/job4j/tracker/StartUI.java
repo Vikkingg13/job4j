@@ -1,5 +1,7 @@
 package ru.job4j.tracker;
 
+import java.awt.*;
+
 public class StartUI {
 
     private static final int ADD = 0;
@@ -18,6 +20,13 @@ public class StartUI {
     }
 
     public void init() {
+        MenuTracker menu = new MenuTracker(this.input, this.tracker);
+        menu.fillActions();
+        do {
+            menu.show();
+            menu.select(Integer.valueOf(input.ask("Введите пункт меню:")));
+        } while (!"y".equals(this.input.ask("Exit? (y): ")));
+        /*
         boolean exit = false;
         while (!exit) {
             this.showMenu();
@@ -120,7 +129,8 @@ public class StartUI {
         System.out.println("5. Искать по имени.");
         System.out.println("6. Выйти.");
     }
-
+    */
+    }
     public static void main(String[] args) {
         new StartUI(new ConsoleInput(), new Tracker()).init();
     }
