@@ -1,9 +1,9 @@
 package ru.job4j.tracker;
 
-public class EditItem implements UserAction{
-    @Override
-    public int key() {
-        return 2;
+public class EditItem extends BaseAction{
+
+    public EditItem(int key, String name) {
+        super(key, name);
     }
 
     @Override
@@ -17,10 +17,5 @@ public class EditItem implements UserAction{
             answer = "---------Заявка с getid : " + item.getId() + " успешно отредактирована---------";
         }
         System.out.println(answer);
-    }
-
-    @Override
-    public String info() {
-        return "2. Редактировать заявку.";
     }
 }

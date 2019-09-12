@@ -17,13 +17,13 @@ public class MenuTracker {
     }
 
     public void fillActions() {
-        this.actions.add(new AddItem());
-        this.actions.add(new ShowItems());
-        this.actions.add(new EditItem());
-        this.actions.add(new DeleteItem());
-        this.actions.add(new FindById());
-        this.actions.add(new FindByName());
-        this.actions.add(new ExitProgram());
+        this.actions.add(new AddItem(0, "Добавить заявку."));
+        this.actions.add(new ShowItems(1, "Показать все заявки."));
+        this.actions.add(new EditItem(2, "Редактировать заявку."));
+        this.actions.add(new DeleteItem(3, "Удалить заявку."));
+        this.actions.add(new FindById(4, "Искать по ID."));
+        this.actions.add(new FindByName(5, "Искать по имени."));
+        this.actions.add(new ExitProgram(6, "Выйти."));
     }
 
     public void select(int key) {
