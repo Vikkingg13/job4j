@@ -16,14 +16,14 @@ public class MenuTracker {
         return actions.size();
     }
 
-    public void fillActions() {
+    public void fillActions(StartUI ui) {
         this.actions.add(new AddItem(0, "Добавить заявку."));
         this.actions.add(new ShowItems(1, "Показать все заявки."));
         this.actions.add(new EditItem(2, "Редактировать заявку."));
         this.actions.add(new DeleteItem(3, "Удалить заявку."));
         this.actions.add(new FindById(4, "Искать по ID."));
         this.actions.add(new FindByName(5, "Искать по имени."));
-        this.actions.add(new ExitProgram(6, "Выйти."));
+        this.actions.add(new ExitProgram(6, "Выйти.", ui));
     }
 
     public void select(int key) {

@@ -143,7 +143,7 @@ public class StartUITest {
     @Test
     public void whenUserEnterSixThenPrintMessage() {
         Tracker tracker = new Tracker();
-        Input stub = new StubInput(new String[] {"6", "y"});
+        Input stub = new StubInput(new String[] {"6"});
         new StartUI(stub, tracker).init();
         String result = this.out.toString();
         String expected = menu +
