@@ -15,7 +15,18 @@ public class StubInput implements Input {
         return this.value[position++];
     }
 
-    public int ask(String text, ArrayList range) {
-        return Integer.valueOf(this.ask(text));
+    public int ask(String text, ArrayList<Integer> range) {
+        int key = Integer.valueOf(this.ask(text));
+        boolean exist = false;
+        for (int value : range) {
+            if (key == value) {
+                exist = true;
+                break;
+            }
+        }
+        if (!exist) {
+            throw new MenuOutException("Out of menu range");
+        }
+        return key;
     }
 }

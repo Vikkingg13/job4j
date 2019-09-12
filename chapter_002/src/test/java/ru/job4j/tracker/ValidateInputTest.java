@@ -36,4 +36,16 @@ public class ValidateInputTest {
         assertThat(this.mem.toString(),
                 is(String.format("Please enter validate data again.%n")));
     }
+
+    @Test
+    public void whenInvalidRangeInput() {
+        ValidateInput input  = new ValidateInput(
+                new StubInput(new String[] {"8", "3"})
+        );
+        ArrayList<Integer> range = new ArrayList<>();
+        range.add(3);
+        input.ask("Enter", range);
+        assertThat(this.mem.toString(),
+                is(String.format("Please select key from menu.%n")));
+    }
 }
