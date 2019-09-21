@@ -10,6 +10,6 @@ public class TrackerEnumTest {
         TrackerEnum first = TrackerEnum.INSTANCE;
         first.add(new Item("item from first", "desc"));
         TrackerEnum second = TrackerEnum.INSTANCE;
-        assertThat(second.getAll()[0].getName(), is("item from first"));
+        assertThat(second.getAll().get(0).getName(), is("item from first"));
     }
 }

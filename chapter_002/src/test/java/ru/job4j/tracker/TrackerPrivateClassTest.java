@@ -9,8 +9,7 @@ public class TrackerPrivateClassTest {
     public void whenTrackerPrivateClassIsSingleton() {
         TrackerPrivateClass first = TrackerPrivateClass.getInstance();
         first.add(new Item("test1", "desc1"));
-        TrackerPrivateClass second = TrackerPrivateClass.getInstance();
         TrackerPrivateClass third = TrackerPrivateClass.getInstance();
-        assertThat(third.getAll()[0].getDesc(), is("desc1"));
+        assertThat(third.getAll().get(0).getDesc(), is("desc1"));
     }
 }
