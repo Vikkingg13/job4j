@@ -11,15 +11,32 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class SortUserTest {
+    private User viktor = new User("Viktor", 25);
+    private User stan = new User("Stan", 16);
+    private User sam = new User("Sam", 32);
+    private User sammy = new User("Sam", 31);
+
     @Test
     public void whenSortUsers() {
         SortUser sorter = new SortUser();
-        User sam = new User("Sam", 35);
-        User bobby = new User("Bobby", 54);
-        User din = new User("Din", 31);
-        Set<User> result = sorter.sort(Arrays.asList(sam, bobby, din));
-        assertThat(result.toArray(), is(new User[] {din, sam, bobby}));
+        Set<User> result = sorter.sort(Arrays.asList(sam, viktor, stan));
+        assertThat(result.toArray(), is(new User[] {stan, viktor, sam}));
+    }
+
+    @Test
+    public void whenSortUsersByLengthName() {
+        SortUser sorter = new SortUser();
+        List<User> result = sorter.sortNameLength(Arrays.asList(viktor, stan, sam));
+        assertThat(result, is(Arrays.asList(sam, stan, viktor)));
+    }
+
+    @Test
+    public void whenSortUsersByAllField() {
+        SortUser sorter = new SortUser();
+        List<User> result = sorter.sortByAllFields(Arrays.asList(sam, sammy, viktor));
+        assertThat(result, is(Arrays.asList(sammy, sam, viktor)));
 
     }
+
 
 }
