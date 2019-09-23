@@ -30,7 +30,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Input stub = new StubInput(new String[] {"0", "test1", "This just test", "y"});
         new StartUI(stub, tracker).init();
-        assertThat(tracker.getAll()[0].getName(), is("test1"));
+        assertThat(tracker.getAll().get(0).getName(), is("test1"));
     }
 
     @Test
@@ -65,7 +65,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Input stub = new StubInput(new String[] {"0", "test name", "test disc", "y"});
         new StartUI(stub, tracker).init();
-        String id = tracker.getAll()[0].getId();
+        String id = tracker.getAll().get(0).getId();
         String result = this.out.toString();
         String expected = menu +
                 "---------Добавление новой заявки---------\r\n" +

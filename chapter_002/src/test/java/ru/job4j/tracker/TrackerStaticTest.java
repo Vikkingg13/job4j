@@ -10,7 +10,7 @@ public class TrackerStaticTest {
         TrackerStatic first = TrackerStatic.getInstance();
         TrackerStatic second = TrackerStatic.getInstance();
         second.add(new Item("test1", "desc from second"));
-        assertThat(first.getAll()[0].getDesc(), is("desc from second"));
+        assertThat(first.getAll().get(0).getDesc(), is("desc from second"));
 
     }
 }

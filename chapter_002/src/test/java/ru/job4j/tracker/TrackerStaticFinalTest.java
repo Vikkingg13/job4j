@@ -10,7 +10,7 @@ public class TrackerStaticFinalTest {
         TrackerStaticFinal first = TrackerStaticFinal.getInstance();
         TrackerStaticFinal second = TrackerStaticFinal.getInstance();
         second.add(new Item("name from second", "desc"));
-        assertThat(first.getAll()[0].getName(), is("name from second"));
+        assertThat(first.getAll().get(0).getName(), is("name from second"));
     }
 
 }
