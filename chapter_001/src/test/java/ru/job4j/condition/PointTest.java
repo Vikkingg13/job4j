@@ -12,7 +12,7 @@ public class PointTest {
         double result = first.distance(second);
         first.info();
         second.info();
-        System.out.println(String.format("Result is %s" , result));
+        System.out.println(String.format("Result is %s", result));
         assertThat(result, is(10D));
     }
 
@@ -38,7 +38,7 @@ public class PointTest {
         double result = first.distance3d(second);
         first.info();
         second.info();
-        System.out.println(String.format("Result is %s" , result));
+        System.out.println(String.format("Result is %s", result));
         assertThat(result, is(5D));
     }
 
@@ -49,7 +49,7 @@ public class PointTest {
         double result = first.distance3d(second);
         first.info();
         second.info();
-        System.out.println(String.format("Result is %s" , result));
+        System.out.println(String.format("Result is %s", result));
         assertThat(result, is(4D));
     }
 }

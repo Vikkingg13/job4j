@@ -27,7 +27,7 @@ public class Point {
     }
 
     public void info() {
-        System.out.println(String.format("Point[%s, %s, %s]", this.x,this.y, this.z));
+        System.out.println(String.format("Point[%s, %s, %s]", this.x, this.y, this.z));
     }
 
 }

@@ -17,7 +17,7 @@ public class UserConvertTest {
         List<User> list = new ArrayList<>();
         list.add(user);
         HashMap<Integer, User> result = convert.process(list);
-        assertThat(result.get(700).getName(), is("James Bond") );
+        assertThat(result.get(700).getName(), is("James Bond"));
 
     }
 }

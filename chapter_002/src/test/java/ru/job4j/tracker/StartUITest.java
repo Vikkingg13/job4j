@@ -9,7 +9,9 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class StartUITest {
-    private final String menu = "\nМеню.\r\n0. Добавить заявку.\r\n1. Показать все заявки.\r\n2. Редактировать заявку.\r\n3. Удалить заявку.\r\n4. Искать по ID.\r\n5. Искать по имени.\r\n6. Выйти.\r\n";
+    private String ln = System.getProperty("line.separator");
+    private final String menu = String.format("\nМеню.%s0. Добавить заявку.%s1. Показать все заявки.%s2. Редактировать заявку.%s3. Удалить заявку.%s4. Искать по ID.%s5. Искать по имени.%s6. Выйти.%s",
+            ln, ln, ln, ln, ln, ln, ln, ln);
     private final PrintStream stdout = System.out;
     private final ByteArrayOutputStream out = new ByteArrayOutputStream();
 
@@ -67,9 +69,7 @@ public class StartUITest {
         new StartUI(stub, tracker).init();
         String id = tracker.getAll().get(0).getId();
         String result = this.out.toString();
-        String expected = menu +
-                "---------Добавление новой заявки---------\r\n" +
-                "---------Новая заявка с getid : " + id + " ---------\r\n";
+        String expected = String.format(menu + "---------Добавление новой заявки---------%s---------Новая заявка с getid : " + id + " ---------%s", ln, ln);
         assertThat(result, is(expected));
     }
 
@@ -81,9 +81,7 @@ public class StartUITest {
         new StartUI(stub, tracker).init();
         String id = item.getId();
         String result = this.out.toString();
-        String expected = menu +
-                "---------Заявки---------\r\n" +
-                "Имя: test name Описание: test desc ID:" + id + "\r\n";
+        String expected = String.format(menu + "---------Заявки---------%sИмя: test name Описание: test desc ID:" + id + "%s", ln, ln);
         assertThat(result, is(expected));
     }
 
@@ -95,8 +93,7 @@ public class StartUITest {
         Input stub = new StubInput(new String[] {"2", id, "new name", "new desc", "y"});
         new StartUI(stub, tracker).init();
         String result = this.out.toString();
-        String expected = menu +
-                "---------Заявка с getid : " + id + " успешно отредактирована---------\r\n";
+        String expected = String.format(menu + "---------Заявка с getid : " + id + " успешно отредактирована---------%s", ln);
         assertThat(result, is(expected));
     }
 
@@ -108,8 +105,7 @@ public class StartUITest {
         Input stub = new StubInput(new String[] {"3", id, "y"});
         new StartUI(stub, tracker).init();
         String result = this.out.toString();
-        String expected = menu +
-                "---------Заявка с getid : " + id + " успешно удалена---------\r\n";
+        String expected = String.format(menu + "---------Заявка с getid : " + id + " успешно удалена---------%s", ln);
         assertThat(result, is(expected));
     }
 
@@ -121,8 +117,7 @@ public class StartUITest {
         Input stub = new StubInput(new String[] {"4", id, "y"});
         new StartUI(stub, tracker).init();
         String result = this.out.toString();
-        String expected = menu +
-                "Имя: " + item.getName() + " Описание: " + item.getDesc() + " ID:" + item.getId() + "\r\n";
+        String expected = String.format(menu + "Имя: " + item.getName() + " Описание: " + item.getDesc() + " ID:" + item.getId() + "%s", ln);
         assertThat(result, is(expected));
     }
 
@@ -134,9 +129,9 @@ public class StartUITest {
         Input stub = new StubInput(new String[] {"5", "test name", "y"});
         new StartUI(stub, tracker).init();
         String result = this.out.toString();
-        String expected = menu +
-                "Имя: " + first.getName() + " Описание: " + first.getDesc() + " ID:" + first.getId() + "\r\n" +
-                "Имя: " + second.getName() + " Описание: " + second.getDesc() + " ID:" + second.getId() + "\r\n";
+        String expected = String.format(menu + "Имя: " + first.getName() + " Описание: " + first.getDesc() + " ID:" + first.getId() + "%s"
+                +
+                "Имя: " + second.getName() + " Описание: " + second.getDesc() + " ID:" + second.getId() + "%s", ln, ln);
         assertThat(result, is(expected));
     }
 
@@ -146,8 +141,7 @@ public class StartUITest {
         Input stub = new StubInput(new String[] {"6"});
         new StartUI(stub, tracker).init();
         String result = this.out.toString();
-        String expected = menu +
-                "---------Выход---------\r\n";
+        String expected = String.format(menu + "---------Выход---------%s", ln);
         assertThat(result, is(expected));
     }
 }
