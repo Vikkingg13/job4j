@@ -1,9 +1,11 @@
 package ru.job4j.tracker;
 
+import java.util.function.Consumer;
+
 public class EditItem extends BaseAction {
 
-    public EditItem(int key, String name) {
-        super(key, name);
+    public EditItem(int key, String name, Consumer<String> output) {
+        super(key, name, output);
     }
 
     @Override
@@ -16,6 +18,6 @@ public class EditItem extends BaseAction {
         if (tracker.replace(id, item)) {
             answer = "---------Заявка с getid : " + item.getId() + " успешно отредактирована---------";
         }
-        System.out.println(answer);
+        output.accept(answer);
     }
 }

@@ -1,11 +1,12 @@
 package ru.job4j.tracker;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class FindByName extends BaseAction {
 
-    public FindByName(int key, String name) {
-        super(key, name);
+    public FindByName(int key, String name, Consumer<String> output) {
+        super(key, name, output);
     }
 
     @Override
@@ -14,10 +15,10 @@ public class FindByName extends BaseAction {
         List<Item> items = tracker.findByName(name);
         if (items.size() > 0) {
             for (Item item : items) {
-                System.out.println("Имя: " + item.getName() + " Описание: " + item.getDesc() + " ID:" + item.getId());
+                output.accept("Имя: " + item.getName() + " Описание: " + item.getDesc() + " ID:" + item.getId());
             }
         } else {
-            System.out.println("Заявки с таким именем не найдено");
+            output.accept("Заявки с таким именем не найдено");
         }
     }
 }

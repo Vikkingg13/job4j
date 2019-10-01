@@ -50,12 +50,11 @@ public class BankTest {
         assertThat(result, is((Account) null));
     }
 
-
     @Test
     public void whenGetUserAccounts() {
         Bank bank = new Bank();
-        Account first= new Account(15, "ABC123");
-        Account second= new Account(25, "DEF456");
+        Account first = new Account(15, "ABC123");
+        Account second = new Account(25, "DEF456");
         bank.addUser(alex);
         bank.addAccountToUser(alex.getPassport(), first);
         bank.addAccountToUser(alex.getPassport(), second);
@@ -67,7 +66,7 @@ public class BankTest {
     public void whenGetAccountByRequisites() {
         Bank bank = new Bank();
         Account first = new Account(15, "ABC123");
-        Account second= new Account(25, "DEF456");
+        Account second = new Account(25, "DEF456");
         bank.addUser(alex);
         bank.addAccountToUser(alex.getPassport(), first);
         bank.addAccountToUser(alex.getPassport(), second);
