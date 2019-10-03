@@ -2,19 +2,31 @@ package ru.job4j.stream;
 
 public class Student {
     private int score;
+    private String surname;
 
-    public Student(int score) {
+    public Student(int score, String surname) {
         this.score = score;
+        this.surname = surname;
     }
 
     public int getScore() {
         return score;
     }
 
+    public String getSurname() {
+        return surname;
+    }
+
     @Override
     public boolean equals(Object obj) {
-        Student student = (Student) obj;
-        return this.score == student.score;
+        boolean result = false;
+        if (obj instanceof Student) {
+            Student student = (Student) obj;
+            if (this.score == student.score) {
+                result = true;
+            }
+        }
+        return result;
     }
 
     @Override
