@@ -25,36 +25,17 @@ public class Bank {
     }
 
     public List<Account> getUserAccounts(String passport) {
-        List<Account> result = new ArrayList<>();
-        for (User user : this.database.keySet()) {
-            if (user.getPassport().equals(passport)) {
-                result = this.database.get(user);
-                break;
-            }
-        }
-        return result;
+        Optional<User> user =  this.database.keySet().stream().filter(e -> passport.equals(e.getPassport())).findFirst();
+        return user.isPresent() ? this.database.get(user.get()) : new ArrayList<>();
     }
 
     public Account getAccount(String passport, String requisites) {
-        Account result = null;
-        for (Account current : getUserAccounts(passport)) {
-            if (current.getRequisites().equals(requisites)) {
-                result = current;
-                break;
-            }
-        }
-        return result;
+        return getUserAccounts(passport).stream().
+                filter(e -> requisites.equals(e.getRequisites())).findFirst().orElse(null);
     }
 
     public boolean isUserExist(String passport) {
-        boolean result = false;
-        for (User user : this.database.keySet()) {
-            if (user.getPassport().equals(passport)) {
-                result = true;
-                break;
-            }
-        }
-        return  result;
+        return this.database.keySet().stream().anyMatch(e -> passport.equals(e.getPassport()));
     }
 
     public boolean transferMoney(String srcPassport, String srcRequisites,
