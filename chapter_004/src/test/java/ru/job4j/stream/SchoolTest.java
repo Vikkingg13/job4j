@@ -2,8 +2,11 @@ package ru.job4j.stream;
 
 import org.junit.Test;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -38,5 +41,21 @@ public class SchoolTest {
         List<Student> result = school.collect(students,
                 student -> student.getScore() < 50);
         assertThat(result, is(Arrays.asList(new Student(35, "Andreev"), new Student(15, "Isaev"))));
+    }
+
+    @Test
+    public void whenGroupingStudentsByScore() {
+        School school = new School();
+        List<Student> students = Arrays.asList(
+                new Student(80, "Semenov"), null, new Student(35, "Andreev"),
+                new Student(15, "Isaev"), null, null, new Student(55, "Nikolaev"),
+                null, new Student(63, "Ivanov")
+        );
+        List<Student> result = school.levelOf(students, 40);
+        List<Student> expected = List.of(
+                new Student(80, "Semenov"), new Student(63, "Ivanov"),
+                new Student(55, "Nikolaev")
+        );
+        assertThat(result, is(expected));
     }
 }
