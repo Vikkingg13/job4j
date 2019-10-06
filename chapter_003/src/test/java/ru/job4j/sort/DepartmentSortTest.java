@@ -23,7 +23,7 @@ public class DepartmentSortTest {
         DepartmentSort sorter = new DepartmentSort();
         List<String> list = new ArrayList<>(departments);
         sorter.sortAscending(list);
-        List<String> result = Arrays.asList(
+        List<String> result = List.of(
                 "K1",
                 "K1/SK1",
                 "K1/SK1/SSK1",
@@ -42,7 +42,7 @@ public class DepartmentSortTest {
         DepartmentSort sorter = new DepartmentSort();
         List<String> list = new ArrayList<>(departments);
         sorter.sortDescending(list);
-        List<String> result = Arrays.asList(
+        List<String> result = List.of(
                 "K2",
                 "K2/SK1",
                 "K2/SK1/SSK2",

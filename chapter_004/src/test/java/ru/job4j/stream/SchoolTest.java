@@ -2,14 +2,12 @@ package ru.job4j.stream;
 
 import org.junit.Test;
 
-import java.util.Arrays;
 import java.util.List;
-
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 public class SchoolTest {
-    private List<Student> students = Arrays.asList(
+    private List<Student> students = List.of(
             new Student(55, "Nikolaev"),
             new Student(80, "Semenov"),
             new Student(35, "Andreev"),
@@ -21,7 +19,7 @@ public class SchoolTest {
         School school = new School();
         List<Student> result = school.collect(students,
                 student -> student.getScore() >= 70);
-        assertThat(result, is(Arrays.asList(new Student(80, "Semenov"))));
+        assertThat(result, is(List.of(new Student(80, "Semenov"))));
     }
 
     @Test
@@ -29,7 +27,7 @@ public class SchoolTest {
         School school = new School();
         List<Student> result = school.collect(students,
                 student -> 50 <= student.getScore() && 70 > student.getScore());
-        assertThat(result, is(Arrays.asList(new Student(55, "Nikolaev"), new Student(63, "Ivanov"))));
+        assertThat(result, is(List.of(new Student(55, "Nikolaev"), new Student(63, "Ivanov"))));
     }
 
     @Test
@@ -37,6 +35,6 @@ public class SchoolTest {
         School school = new School();
         List<Student> result = school.collect(students,
                 student -> student.getScore() < 50);
-        assertThat(result, is(Arrays.asList(new Student(35, "Andreev"), new Student(15, "Isaev"))));
+        assertThat(result, is(List.of(new Student(35, "Andreev"), new Student(15, "Isaev"))));
     }
 }
