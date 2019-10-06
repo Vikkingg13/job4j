@@ -8,7 +8,7 @@ import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 public class ProfilesTest {
-    private List<Profile> list = Arrays.asList(
+    private List<Profile> list = List.of(
         new Profile(new Address("Minsk", "Kirova", 14, 35)),
         new Profile(new Address("Lida", "Lenina", 42, 12)),
         new Profile(new Address("Minsk", "Kirova", 14, 35)),
@@ -21,7 +21,7 @@ public class ProfilesTest {
     public void whenCollectUniqueSortedAddresses() {
         Profiles profiles = new Profiles();
         List<Address> result = profiles.collect(list);
-        List<Address> expected =  Arrays.asList(
+        List<Address> expected =  List.of(
                 new Address("Lida", "Lenina", 42, 12),
                 new Address("Minsk", "Kirova", 14, 35),
                 new Address("Moscow", "Komsomolskaya", 21, 53),

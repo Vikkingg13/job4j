@@ -17,6 +17,6 @@ public class ConvertMatrix2ListTest {
                 {70, 80, 90}
         };
         List<Integer> result = converter.convert(matrix);
-        assertThat(result, is(List.of(10, 20 ,30, 40, 50, 60, 70, 80, 90)));
+        assertThat(result, is(List.of(10, 20, 30, 40, 50, 60, 70, 80, 90)));
     }
 }

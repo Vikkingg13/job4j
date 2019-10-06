@@ -13,9 +13,11 @@ public class UserConvertTest {
     @Test
     public void whenListUsersConvertToHashMap() {
         UserConvert convert = new UserConvert();
-        User user = new User(700, "James Bond", "London");
-        List<User> list = new ArrayList<>();
-        list.add(user);
+        List<User> list = List.of(
+                new User(700, "James Bond", "London"),
+                new User(100, "Max Payne", "New York"),
+                new User(999, "Serious Sam", "Mexico")
+        );
         HashMap<Integer, User> result = convert.process(list);
         assertThat(result.get(700).getName(), is("James Bond"));
 

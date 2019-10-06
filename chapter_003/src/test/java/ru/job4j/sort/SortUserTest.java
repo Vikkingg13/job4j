@@ -20,23 +20,21 @@ public class SortUserTest {
     public void whenSortUsers() {
         SortUser sorter = new SortUser();
         Set<User> result = sorter.sort(Arrays.asList(sam, viktor, stan));
-        assertThat(result.toArray(), is(new User[] {stan, viktor, sam}));
+        assertThat(result, is(Set.of(stan, viktor, sam)));
     }
 
     @Test
     public void whenSortUsersByLengthName() {
         SortUser sorter = new SortUser();
         List<User> result = sorter.sortNameLength(Arrays.asList(viktor, stan, sam));
-        assertThat(result, is(Arrays.asList(sam, stan, viktor)));
+        assertThat(result, is(List.of(sam, stan, viktor)));
     }
 
     @Test
     public void whenSortUsersByAllField() {
         SortUser sorter = new SortUser();
         List<User> result = sorter.sortByAllFields(Arrays.asList(sam, sammy, viktor));
-        assertThat(result, is(Arrays.asList(sammy, sam, viktor)));
+        assertThat(result, is(List.of(sammy, sam, viktor)));
 
     }
-
-
 }
