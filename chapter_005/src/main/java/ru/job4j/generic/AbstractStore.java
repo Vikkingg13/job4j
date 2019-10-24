@@ -3,7 +3,7 @@ package ru.job4j.generic;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public abstract class AbstractStore<T extends Base> implements Store<T>{
+public abstract class AbstractStore<T extends Base> implements Store<T> {
 
     private SimpleArray<T> array;
 
@@ -40,7 +40,7 @@ public abstract class AbstractStore<T extends Base> implements Store<T>{
     public T findById(String id) {
         Iterator<T> iterator = this.array.iterator();
         T result = null;
-        while(iterator.hasNext()) {
+        while (iterator.hasNext()) {
             T model = iterator.next();
             if (model.getId().equals(id)) {
                 result = model;
