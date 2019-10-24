@@ -22,7 +22,7 @@ public class IteratorArray implements Iterator<Integer> {
         cells++;
         if (array[rows].length == cells) {
             cells = 0;
-            rows ++;
+            rows++;
         }
         return result;
     }
