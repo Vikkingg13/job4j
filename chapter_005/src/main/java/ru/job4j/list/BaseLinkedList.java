@@ -33,6 +33,25 @@ public class BaseLinkedList<E> implements Iterable<E> {
         return node.data;
     }
 
+    public void remove(int index) {
+        Node<E> node = this.first;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        if (node.prev != null) {
+            node.prev.next = node.next;
+        } else {
+            this.first = node.next;
+        }
+        if (node.next != null) {
+            node.next.prev = node.prev;
+        } else {
+            this.last = node.prev;
+        }
+        size--;
+        modCount++;
+    }
+
     public Iterator<E> iterator() {
         return new Iterator<>() {
 
