@@ -2,12 +2,12 @@ package ru.job4j.list;
 
 import java.util.*;
 
-public class DynamicArray<T> implements Iterable<T> {
+public class SimpleList<T> implements Iterable<T> {
     private Object[] container;
     private int modCount = 0;
     private int position = 0;
 
-    public DynamicArray(int size) {
+    public SimpleList(int size) {
         container = new Object[size];
     }
 

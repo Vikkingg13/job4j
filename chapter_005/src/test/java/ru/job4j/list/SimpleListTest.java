@@ -2,16 +2,15 @@ package ru.job4j.list;
 
 import org.junit.Test;
 
-import java.util.ConcurrentModificationException;
-import java.util.Iterator;
+import java.util.*;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
-public class DynamicArrayTest {
+public class SimpleListTest {
     @Test
     public void whenAddElementInFullArrayThenNewSizeArray() {
-        DynamicArray<Integer> array = new DynamicArray<>(3);
+        SimpleList<Integer> array = new SimpleList<>(3);
         array.add(1);
         array.add(2);
         array.add(3);
@@ -20,7 +19,7 @@ public class DynamicArrayTest {
 
     @Test (expected = ConcurrentModificationException.class)
     public void whenArrayModifiedThenCurrentIteratorDropException() {
-        DynamicArray<Integer> array = new DynamicArray<>(10);
+        SimpleList<Integer> array = new SimpleList<>(10);
         array.add(1);
         Iterator<Integer> iterator = array.iterator();
         array.add(2);
