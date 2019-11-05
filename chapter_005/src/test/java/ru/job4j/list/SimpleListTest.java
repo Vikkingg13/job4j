@@ -2,8 +2,7 @@ package ru.job4j.list;
 
 import org.junit.Test;
 
-import java.util.ConcurrentModificationException;
-import java.util.Iterator;
+import java.util.*;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
