@@ -26,6 +26,19 @@ public class SimpleArray<T> implements Iterable<T> {
         this.position--;
     }
 
+    public int indexOf(T model) {
+        int result = -1;
+        int index = 0;
+        for (Object obj : this.array) {
+            if (model.equals(obj)) {
+                result = index;
+                break;
+            }
+            index++;
+        }
+        return result;
+    }
+
     @SuppressWarnings ("unchecked")
     public T get(int index) {
         return (T) this.array[index];
