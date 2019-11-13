@@ -26,6 +26,23 @@ public class Tree<E extends Comparable<E>> implements SimpleTree<E>  {
         return result;
     }
 
+    public boolean isBinary() {
+        boolean result = true;
+        Queue<Node<E>> data = new LinkedList<>();
+        data.offer(this.root);
+        while (!data.isEmpty()) {
+            Node<E> element = data.poll();
+            if (element.leaves().size() > 2) {
+                result = false;
+                break;
+            }
+            for (Node<E> child : element.leaves()) {
+                data.offer(child);
+            }
+        }
+        return result;
+    }
+
     @Override
     public Optional<Node<E>> findBy(E value) {
         Optional<Node<E>> result = Optional.empty();
