@@ -21,7 +21,7 @@ public class SimpleSet<T> {
     private boolean isUnique(T value) {
         boolean result = true;
         Iterator<T> iterator = iterator();
-        while(iterator.hasNext()) {
+        while (iterator.hasNext()) {
             T element = iterator.next();
             if (element.hashCode() == value.hashCode() && element.equals(value)) {
                 result = false;

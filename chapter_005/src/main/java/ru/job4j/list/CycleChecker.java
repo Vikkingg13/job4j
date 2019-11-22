@@ -5,7 +5,8 @@ public class CycleChecker {
     public boolean hasCycle(Node first) {
         boolean result = false;
         Node slow, fast;
-        slow = fast = first;
+        slow = first;
+        fast = first;
         while (slow != null && fast != null && fast.getNext() != null) {
             slow = slow.getNext();
             fast = fast.getNext().getNext();

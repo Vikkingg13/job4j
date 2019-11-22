@@ -8,7 +8,7 @@ public class BinarySearchTest {
     @Test
     public void whenArrayHasElementSearchingThenReturnIndexOfElement() {
         BinarySearch searcher = new BinarySearch();
-        int [] array = {1, 4, 7, 11, 34, 39, 42, 55, 56, 58, 71};
+        int[] array = {1, 4, 7, 11, 34, 39, 42, 55, 56, 58, 71};
         int expected = searcher.search(array, 55);
         assertThat(expected, is(7));
     }
@@ -16,7 +16,7 @@ public class BinarySearchTest {
     @Test
     public void whenArrayHasElementSearchingThenReturnMenusOne() {
         BinarySearch searcher = new BinarySearch();
-        int [] array = {1, 4, 7, 11, 34, 39, 42, 55, 56, 58, 71};
+        int[] array = {1, 4, 7, 11, 34, 39, 42, 55, 56, 58, 71};
         int expected = searcher.search(array, 3);
         assertThat(expected, is(-1));
     }

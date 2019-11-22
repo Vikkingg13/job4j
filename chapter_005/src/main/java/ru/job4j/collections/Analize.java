@@ -8,7 +8,8 @@ public class Analize {
 
     public Info diff(List<User> previous, List<User> current) {
         int added, changed, deleted;
-        added = changed = deleted = 0;
+        added = 0;
+        changed = 0;
         Map<Integer, String> map = previous.stream().collect(Collectors.toMap(User::getId, User::getName));
         for (User user : current) {
             int key = user.id;
@@ -39,11 +40,17 @@ public class Analize {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
             Info info = (Info) o;
-            return added == info.added &&
-                    changed == info.changed &&
+            return added == info.added
+                    &&
+                    changed == info.changed
+                    &&
                     deleted == info.deleted;
         }
 
