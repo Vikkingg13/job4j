@@ -10,7 +10,7 @@ public class FindByName extends BaseAction {
     }
 
     @Override
-    public void execute(Input input, Tracker tracker) {
+    public void execute(Input input, ITracker tracker) {
         String name = input.ask("Введите имя заявки для поиска :");
         List<Item> items = tracker.findByName(name);
         if (items.size() > 0) {

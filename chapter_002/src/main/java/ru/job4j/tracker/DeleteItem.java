@@ -9,7 +9,7 @@ public class DeleteItem extends BaseAction {
     }
 
     @Override
-    public void execute(Input input, Tracker tracker) {
+    public void execute(Input input, ITracker tracker) {
         String id = input.ask("Введите ID заявки для удаления :");
         String answer = "---------Заявка с таким ID не найдена---------";
         if (tracker.delete(id)) {

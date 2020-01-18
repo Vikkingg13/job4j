@@ -9,7 +9,7 @@ public class ShowItems extends BaseAction {
     }
 
     @Override
-    public void execute(Input input, Tracker tracker) {
+    public void execute(Input input, ITracker tracker) {
         output.accept("---------Заявки---------");
         for (Item item : tracker.getAll()) {
             output.accept("Имя: " + item.getName() + " Описание: " + item.getDesc() + " ID:" + item.getId());
