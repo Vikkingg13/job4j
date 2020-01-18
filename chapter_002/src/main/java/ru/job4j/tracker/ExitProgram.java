@@ -10,7 +10,7 @@ public class ExitProgram extends BaseAction {
         this.ui = ui;
     }
 
-    public void execute(Input input, Tracker tracker) {
+    public void execute(Input input, ITracker tracker) {
         output.accept("---------Выход---------");
         this.ui.stop();
     }

@@ -9,7 +9,7 @@ public class EditItem extends BaseAction {
     }
 
     @Override
-    public void execute(Input input, Tracker tracker) {
+    public void execute(Input input, ITracker tracker) {
         String id = input.ask("Введите ID заявки для редактирования :");
         String name = input.ask("Введите новое имя заявки :");
         String desc = input.ask("Введите новое описание заявки :");

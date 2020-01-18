@@ -8,10 +8,10 @@ public class StartUI {
 
     private boolean working = true;
     private final Input input;
-    private final Tracker tracker;
+    private final ITracker tracker;
     private final Consumer<String> output;
 
-    public StartUI(Input input, Tracker tracker, Consumer<String> output) {
+    public StartUI(Input input, ITracker tracker, Consumer<String> output) {
         this.input = input;
         this.tracker = tracker;
         this.output = output;
