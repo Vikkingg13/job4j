@@ -5,7 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import java.sql.*;
 
 public class SQLStorage {
-    private static final Logger Log = LogManager.getLogger(SQLStorage.class.getName());
+    private static final Logger LOG = LogManager.getLogger(SQLStorage.class.getName());
 
     public static void main(String[] args) {
         String url = "jdbc:postgresql://localhost:5432/java_a_from_z";
@@ -18,13 +18,13 @@ public class SQLStorage {
             st.executeUpdate();
             st.close();
         } catch (SQLException ex) {
-            Log.error(ex.getMessage(), ex);
+            LOG.error(ex.getMessage(), ex);
         } finally {
             if (conn != null) {
                 try {
                     conn.close();
                 } catch (SQLException ex) {
-                    Log.error(ex.getMessage(), ex);
+                    LOG.error(ex.getMessage(), ex);
                 }
             }
         }
