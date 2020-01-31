@@ -17,7 +17,7 @@ public class ParserXML {
     private final File file;
 
     public ParserXML(File file) {
-        this.file= file;
+        this.file = file;
     }
 
     /**

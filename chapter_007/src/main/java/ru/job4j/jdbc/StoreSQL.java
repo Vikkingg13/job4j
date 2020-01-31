@@ -26,9 +26,10 @@ public class StoreSQL implements AutoCloseable {
         try {
             connect = DriverManager.getConnection(config.get("url"));
             Statement statement = connect.createStatement();
-            statement.execute("CREATE TABLE IF NOT EXISTS entries(" +
-                    "id serial primary key," +
-                    "field integer)");
+            statement.execute("CREATE TABLE IF NOT EXISTS entries("
+                    + "id serial primary key,"
+                    + "field integer)"
+            );
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }

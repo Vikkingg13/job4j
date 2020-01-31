@@ -32,10 +32,10 @@ public class TrackerSQL implements ITracker, AutoCloseable {
             );
             Statement st = connection.createStatement();
             st.execute("DROP TABLE IF EXISTS items");
-            st.execute("CREATE TABLE IF NOT EXISTS items(" +
-                            "id serial primary key," +
-                            "name varchar(200)," +
-                            "description text)"
+            st.execute("CREATE TABLE IF NOT EXISTS items("
+                    + "id serial primary key,"
+                    + "name varchar(200),"
+                    + "description text)"
             );
         } catch (Exception ex) {
             throw new IllegalStateException(ex);

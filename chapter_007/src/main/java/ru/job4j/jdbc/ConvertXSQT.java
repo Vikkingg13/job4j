@@ -24,8 +24,8 @@ public class ConvertXSQT {
             TransformerFactory factory = TransformerFactory.newInstance();
             Transformer transformer = factory.newTransformer(
                     new StreamSource(new FileInputStream(scheme)));
-            transformer.setOutputProperty(OutputKeys.INDENT, "yes" );
-            transformer.setOutputProperty(OutputKeys.DOCTYPE_PUBLIC,"yes");
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            transformer.setOutputProperty(OutputKeys.DOCTYPE_PUBLIC, "yes");
             transformer.transform(
                     new StreamSource(new FileInputStream(source)),
                     new StreamResult(new FileOutputStream(dest)));
