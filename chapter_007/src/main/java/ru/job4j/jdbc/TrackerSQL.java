@@ -16,6 +16,14 @@ import java.util.Properties;
 public class TrackerSQL implements ITracker, AutoCloseable {
     private Connection connection;
 
+    public TrackerSQL() {
+
+    }
+
+    public TrackerSQL(Connection connection) {
+        this.connection = connection;
+    }
+
     /**
      * Create connection with DBMS and create table items.
      * @return true, if connection success, else false.
@@ -31,7 +39,6 @@ public class TrackerSQL implements ITracker, AutoCloseable {
                     config.getProperty("password")
             );
             Statement st = connection.createStatement();
-            st.execute("DROP TABLE IF EXISTS items");
             st.execute("CREATE TABLE IF NOT EXISTS items("
                     + "id serial primary key,"
                     + "name varchar(200),"
