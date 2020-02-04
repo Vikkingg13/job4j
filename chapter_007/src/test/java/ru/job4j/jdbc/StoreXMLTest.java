@@ -12,10 +12,10 @@ public class StoreXMLTest {
 
     @Test
     public void whenSaveTwoEntryThenCreatedXMLFileWithTwoEntry() throws IOException {
-        File output = new File("./src/main/resources/output.xml");
-        StoreXML store = new StoreXML(output);
+        File xml = new File("./src/main/resources/firstFormat.xml");
+        StoreXML store = new StoreXML(xml);
         store.save(List.of(new XMLUsage.Entry(1), new XMLUsage.Entry(2)));
-        String result = readFile(output);
+        String result = readFile(xml);
         String expected = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
                 + "<entries>"
                 + "    <entry>"

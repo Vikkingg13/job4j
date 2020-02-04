@@ -49,13 +49,20 @@ public class StoreSQL implements AutoCloseable {
      */
     public void generate(int size) {
         try {
+            connect.setAutoCommit(false);
             PreparedStatement statement = connect.prepareStatement("INSERT INTO entries(field) VALUES(?)");
             for (int i = 1; i <= size; i++) {
                 statement.setInt(1, i);
-                statement.execute();
+                statement.addBatch();
             }
+            statement.executeBatch();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
+            try {
+                connect.rollback();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 
