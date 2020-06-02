@@ -12,6 +12,7 @@ public class ControllQualityTest {
 
     @Test
     public void whereCurrentExpirationDateLess25PercentThenFoodAddedToShopAndAddDiscount() {
+        DateInfo.setDate(new GregorianCalendar(2020, Calendar.JANUARY, 18).getTime());
         IceCream iceCream = new IceCream("Trio",
                 new GregorianCalendar(2020, Calendar.JANUARY, 11).getTime(),
                 new GregorianCalendar(2020, Calendar.JANUARY, 20).getTime(),
@@ -27,13 +28,11 @@ public class ControllQualityTest {
                 new GregorianCalendar(2020, Calendar.JANUARY, 19).getTime(),
                 30,
                 0);
-        ControllQuality controll = new ControllQuality(
-                new GregorianCalendar(2020, Calendar.JANUARY, 18).getTime());
+        ControllQuality controll = new ControllQuality();
         controll.distribute(iceCream);
         controll.distribute(candy);
         controll.distribute(cheese);
         List<Food> foods = Shop.getInstance().getFoods();
-        System.out.println(foods.size());
         assertEquals("Trio", foods.get(0).getName());
         assertEquals(40, foods.get(0).getDiscount());
         assertEquals("Choco", foods.get(1).getName());
@@ -45,6 +44,7 @@ public class ControllQualityTest {
 
     @Test
     public void whereCurrentExpirationDateMore75PercentThenFoodAddedToWarehouse() {
+        DateInfo.setDate(new GregorianCalendar(2020, Calendar.JANUARY, 13).getTime());
         IceCream iceCream = new IceCream("Trio",
                 new GregorianCalendar(2020, Calendar.JANUARY, 11).getTime(),
                 new GregorianCalendar(2020, Calendar.JANUARY, 30).getTime(),
@@ -60,8 +60,7 @@ public class ControllQualityTest {
                 new GregorianCalendar(2020, Calendar.JANUARY, 20).getTime(),
                 30,
                 0);
-        ControllQuality controll = new ControllQuality(
-                new GregorianCalendar(2020, Calendar.JANUARY, 13).getTime());
+        ControllQuality controll = new ControllQuality();
         controll.distribute(iceCream);
         controll.distribute(candy);
         controll.distribute(cheese);
@@ -73,6 +72,7 @@ public class ControllQualityTest {
 
     @Test
     public void whereCurrentExpirationDateLess75PercentAndMore25PercentThenFoodAddedToShop() {
+        DateInfo.setDate(new GregorianCalendar(2020, Calendar.JANUARY, 17).getTime());
         IceCream iceCream = new IceCream("Trio",
                 new GregorianCalendar(2020, Calendar.JANUARY, 11).getTime(),
                 new GregorianCalendar(2020, Calendar.JANUARY, 28).getTime(),
@@ -88,8 +88,7 @@ public class ControllQualityTest {
                 new GregorianCalendar(2020, Calendar.JANUARY, 21).getTime(),
                 30,
                 0);
-        ControllQuality controll = new ControllQuality(
-                new GregorianCalendar(2020, Calendar.JANUARY, 17).getTime());
+        ControllQuality controll = new ControllQuality();
         controll.distribute(iceCream);
         controll.distribute(candy);
         controll.distribute(cheese);
@@ -102,6 +101,7 @@ public class ControllQualityTest {
 
     @Test
     public void whereExpiredThenFoodAddedToTrash() {
+        DateInfo.setDate(new GregorianCalendar(2020, Calendar.JULY, 5).getTime());
         IceCream iceCream = new IceCream("Trio",
                 new GregorianCalendar(2020, Calendar.JANUARY, 11).getTime(),
                 new GregorianCalendar(2020, Calendar.JANUARY, 23).getTime(),
@@ -117,8 +117,7 @@ public class ControllQualityTest {
                 new GregorianCalendar(2020, Calendar.FEBRUARY, 19).getTime(),
                 30,
                 0);
-        ControllQuality controll = new ControllQuality(
-                new GregorianCalendar(2020, Calendar.JULY, 5).getTime());
+        ControllQuality controll = new ControllQuality();
         controll.distribute(iceCream);
         controll.distribute(candy);
         controll.distribute(cheese);

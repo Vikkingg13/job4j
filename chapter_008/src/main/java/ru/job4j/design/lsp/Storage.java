@@ -7,8 +7,8 @@ public abstract class Storage {
 
     private List<Food> list = new ArrayList<>();
 
-    public void add(Food food) {
-        list.add(food);
+    public boolean add(Food food) {
+        return list.add(food);
     }
 
     public List<Food> getFoods() {
