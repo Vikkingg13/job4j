@@ -6,4 +6,7 @@ package ru.job4j.design.lsp;
  * @author Viktor Grigoriev
  */
 public interface Vehicle {
+
+    int size();
+    int number();
 }
