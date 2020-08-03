@@ -11,9 +11,8 @@ public interface ParkingPlace<T extends Vehicle> {
      * Adding vehicles to place.
      *
      * @param vehicle for add to place
-     * @return true if added else false
      */
-    boolean add(T vehicle);
+    void add(T vehicle);
 
     /**
      * Check free place.
