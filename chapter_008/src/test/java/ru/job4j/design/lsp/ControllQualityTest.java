@@ -126,4 +126,41 @@ public class ControllQualityTest {
         assertEquals("Choco", foods.get(1).getName());
         assertEquals("Galand", foods.get(2).getName());
     }
+
+    @Test
+    public void whereResortAllFoods() {
+        DateInfo.setDate(new GregorianCalendar(2020, Calendar.JANUARY, 13).getTime());
+        IceCream iceCream = new IceCream("Trio",
+                new GregorianCalendar(2020, Calendar.JANUARY, 11).getTime(),
+                new GregorianCalendar(2020, Calendar.JANUARY, 30).getTime(),
+                5,
+                0);
+        Candy candy = new Candy("Choco",
+                new GregorianCalendar(2019, Calendar.DECEMBER, 2).getTime(),
+                new GregorianCalendar(2020, Calendar.SEPTEMBER, 5).getTime(),
+                3,
+                0);
+        Cheese cheese = new Cheese("Galand",
+                new GregorianCalendar(2020, Calendar.JANUARY, 12).getTime(),
+                new GregorianCalendar(2020, Calendar.JANUARY, 20).getTime(),
+                30,
+                0);
+        ControllQuality controll = new ControllQuality();
+        controll.distribute(iceCream);
+        controll.distribute(candy);
+        controll.distribute(cheese);
+        List<Food> foods = Warehouse.getInstance().getFoods();
+        assertEquals("Trio", foods.get(0).getName());
+        assertEquals("Choco", foods.get(1).getName());
+        assertEquals("Galand", foods.get(2).getName());
+        DateInfo.setDate(new GregorianCalendar(2020, Calendar.MARCH, 3).getTime());
+        controll.resort();
+        foods = Trash.getInstance().getFoods();
+        assertEquals("Trio", foods.get(0).getName());
+        foods = Shop.getInstance().getFoods();
+        assertEquals("Choco", foods.get(0).getName());
+        foods = Trash.getInstance().getFoods();
+        assertEquals("Galand", foods.get(1).getName());
+        controll.clearAll();
+    }
 }

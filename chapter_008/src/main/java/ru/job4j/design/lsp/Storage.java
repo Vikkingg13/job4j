@@ -14,4 +14,14 @@ public abstract class Storage {
     public List<Food> getFoods() {
         return list;
     }
+
+    public List<Food> unload() {
+        List<Food> foods = new ArrayList<>(getFoods());
+        list.clear();
+        return foods;
+    }
+
+    public void clear() {
+        list.clear();
+    }
 }
