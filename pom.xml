@@ -138,9 +138,13 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.10.3</version>
         </dependency>
-
-
-        <!-- https://mvnrepository.com/artifact/sax/sax -->
+        <!-- https://mvnrepository.com/artifact/com.carrotsearch/java-sizeof -->
+        <!-- https://mvnrepository.com/artifact/com.carrotsearch/java-sizeof -->
+        <dependency>
+            <groupId>com.carrotsearch</groupId>
+            <artifactId>java-sizeof</artifactId>
+            <version>0.0.4</version>
+        </dependency>
     </dependencies>
 	<build>
 		<plugins>
