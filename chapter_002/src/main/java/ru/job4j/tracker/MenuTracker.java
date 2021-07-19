@@ -28,6 +28,7 @@ public class MenuTracker {
         this.actions.add(new FindById(4, "Искать по ID.", this.output));
         this.actions.add(new FindByName(5, "Искать по имени.", this.output));
         this.actions.add(new ExitProgram(6, "Выйти.", ui, this.output));
+        this.actions.add(new FillItems(7, "Заполнить заявками.", this.output));
     }
 
     public void select(int key) {
