@@ -25,7 +25,7 @@ public class ParkingTest {
     @Test
     public void whenAddTruckToParkingTruckPlaceThenReturnTrue() {
         Parking parking = new Parking(2, 1);
-        Truck truck = new MercedesTruck(2,"BH143");
+        Truck truck = new MercedesTruck(2, "BH143");
         assertTrue(parking.add(truck, 2));
     }
 

@@ -10,8 +10,8 @@
     <packaging>pom</packaging>
     <version>3.0</version>
     <modules>
+        <module>puzzle</module>
         <module>chapter_001</module>
-		<module>puzzle</module>
         <module>chapter_002</module>
         <module>chapter_003</module>
         <module>chapter_004</module>
@@ -35,7 +35,7 @@
             <properties>
                 <db.url>jdbc:postgresql://localhost/tracker</db.url>
                 <db.username>postgres</db.username>
-                <db.password></db.password>
+                <db.password/>
                 <db.driver>org.postgresql.Driver</db.driver>
             </properties>
         </profile>
@@ -80,7 +80,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>4.13.1</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
@@ -106,7 +106,7 @@
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
-            <version>2.11.1</version>
+            <version>2.13.2</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc -->
         <dependency>
@@ -145,13 +145,18 @@
             <artifactId>java-sizeof</artifactId>
             <version>0.0.4</version>
         </dependency>
+        <dependency>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.7</version>
+        </dependency>
     </dependencies>
 	<build>
 		<plugins>
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.4</version>
+                <version>0.8.7</version>
                 <executions>
                     <execution>
                         <goals>

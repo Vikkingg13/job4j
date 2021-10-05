@@ -85,6 +85,8 @@ public class Menu {
                     int index = Integer.parseInt(scanner.nextLine());
                     task.delete(index);
                     break;
+                default:
+                    break;
             }
             display();
             System.out.println("Exit? Yes/No");

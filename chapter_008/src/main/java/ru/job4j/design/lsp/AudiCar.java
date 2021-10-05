@@ -2,7 +2,7 @@ package ru.job4j.design.lsp;
 
 public class AudiCar implements Car {
 
-    private static final int size = 1;
+    private static final int SIZE = 1;
     private String number;
 
     public AudiCar(String number) {
@@ -11,7 +11,7 @@ public class AudiCar implements Car {
 
     @Override
     public int size() {
-        return size;
+        return SIZE;
     }
 
     @Override

@@ -74,8 +74,8 @@ public class ReportForDevelopTest {
                 .append("<employees>")
                 .append("   <employee>")
                 .append("      <name>Sergey</name>")
-                .append("      <hired>Thu Nov 01 00:00:00 AST 1990</hired>")
-                .append("      <fired>Fri Jan 07 00:00:00 AST 1994</fired>")
+                .append("      <hired>Thu Nov 01 00:00:00 MSK 1990</hired>")
+                .append("      <fired>Fri Jan 07 00:00:00 MSK 1994</fired>")
                 .append("      <salary>800.0</salary>")
                 .append("   </employee>")
                 .append("</employees>");

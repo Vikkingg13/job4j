@@ -12,8 +12,8 @@ import static org.junit.Assert.assertThat;
 
 public class StartUITest {
     private String ln = System.getProperty("line.separator");
-    private final String menu = String.format("\nМеню.%s0. Добавить заявку.%s1. Показать все заявки.%s2. Редактировать заявку.%s3. Удалить заявку.%s4. Искать по ID.%s5. Искать по имени.%s6. Выйти.%s",
-            ln, ln, ln, ln, ln, ln, ln, ln);
+    private final String menu = String.format("\nМеню.%s0. Добавить заявку.%s1. Показать все заявки.%s2. Редактировать заявку.%s3. Удалить заявку.%s4. Искать по ID.%s5. Искать по имени.%s6. Выйти.%s7. Заполнить заявками.%s",
+            ln, ln, ln, ln, ln, ln, ln, ln, ln);
     private final ByteArrayOutputStream out = new ByteArrayOutputStream();
     private final Consumer<String> output = new Consumer<>() {
         private final PrintStream stdout = new PrintStream(out);

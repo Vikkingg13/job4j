@@ -27,7 +27,7 @@ public class Triangle {
 
     public double area() {
         double result = -1;
-        double a = first.distance(third); //distance is static method
+        double a = first.distance(third);
         double b = second.distance(first);
         double c = third.distance(second);
         double p = period(a, b, c);

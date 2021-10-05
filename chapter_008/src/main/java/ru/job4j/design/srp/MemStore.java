@@ -6,7 +6,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class MemStore implements Store {
-    private final List<Employee> employees = new ArrayList();
+    private final List<Employee> employees = new ArrayList<>();
 
     public void add(Employee employee) {
         employees.add(employee);

@@ -110,40 +110,24 @@ public class ReportForHRTest {
         store.add(sergey);
         Report report = new ReportForFinance(store);
         StringBuilder expected = new StringBuilder();
-        expected.append("[" +
-                "{"
-                +
-                "\"name\":\"Viktor\","
-                +
-                "\"salary\":1050.5"
-                +
-                "},"
-                +
-                "{"
-                +
-                "\"name\":\"Sergey\","
-                +
-                "\"salary\":800.0"
-                +
-                "},"
-                +
-                "{"
-                +
-                "\"name\":\"Oleg\","
-                +
-                "\"salary\":750.0"
-                +
-                "},"
-                +
-                "{"
-                +
-                "\"name\":\"Mishail\","
-                +
-                "\"salary\":700.5"
-                +
-                "}"
-                +
-                "]");
+        expected.append("["
+                + "{"
+                + "\"name\":\"Viktor\","
+                + "\"salary\":1050.5"
+                + "},"
+                + "{"
+                + "\"name\":\"Sergey\","
+                + "\"salary\":800.0"
+                + "},"
+                + "{"
+                + "\"name\":\"Oleg\","
+                + "\"salary\":750.0"
+                + "},"
+                + "{"
+                + "\"name\":\"Mishail\","
+                + "\"salary\":700.5"
+                + "}"
+                + "]");
         report.generateToJSON(em -> true);
         String result = readFile(new File("employees_hr.json"));
         assertEquals(expected.toString(), result);

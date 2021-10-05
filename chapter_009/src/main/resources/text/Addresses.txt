@@ -1,0 +1,4 @@
+Minsk, Pushkina, 34
+Hrodna, Lenina, 6
+Gomel, Filipenko, 72
+Kiev, Vladimirskaya, 11

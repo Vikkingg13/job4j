@@ -8,7 +8,6 @@ public class SoftDemo {
 
     public static void main(String[] args) throws InterruptedException {
         example1();
-//        example2();
     }
 
     public static void example1() throws InterruptedException {

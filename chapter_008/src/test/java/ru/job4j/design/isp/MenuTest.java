@@ -29,22 +29,23 @@ public class MenuTest {
         menu.setInput(stub);
         menu.run();
         String string =
-                "Task One 1" + ln +
-                "----Sub Task Two 1.1" + ln +
-                "--------Sub Task One 1.1.1" + ln +
-                "--------Sub Task Three 1.1.2" + ln +
-                "Select task:" + ln +
-                "Enter command:" + ln +
-                "0 - next" + ln +
-                "1 - rename current task" + ln +
-                "2 - add sub task" + ln +
-                "3 - delete sub task" + ln +
-                "Enter title: " + ln +
-                "Task One 1" + ln +
-                "----New Title 1.1" + ln +
-                "--------Sub Task One 1.1.1" + ln +
-                "--------Sub Task Three 1.1.2" + ln +
-                "Exit? Yes/No" + ln ;
+                "Task One 1"
+                        + ln + "----Sub Task Two 1.1"
+                        + ln + "--------Sub Task One 1.1.1"
+                        + ln + "--------Sub Task Three 1.1.2"
+                        + ln + "Select task:"
+                        + ln + "Enter command:"
+                        + ln + "0 - next"
+                        + ln + "1 - rename current task"
+                        + ln + "2 - add sub task"
+                        + ln + "3 - delete sub task"
+                        + ln + "Enter title: "
+                        + ln + "Task One 1"
+                        + ln + "----New Title 1.1"
+                        + ln + "--------Sub Task One 1.1.1"
+                        + ln + "--------Sub Task Three 1.1.2"
+                        + ln + "Exit? Yes/No"
+                        + ln;
         assertEquals(string, bytes.toString());
     }
 
@@ -64,23 +65,24 @@ public class MenuTest {
         menu.setInput(stub);
         menu.run();
         String string =
-                "Task One 1" + ln +
-                        "----Sub Task Two 1.1" + ln +
-                        "--------Sub Task One 1.1.1" + ln +
-                        "--------Sub Task Three 1.1.2" + ln +
-                        "Select task:" + ln +
-                        "Enter command:" + ln +
-                        "0 - next" + ln +
-                        "1 - rename current task" + ln +
-                        "2 - add sub task" + ln +
-                        "3 - delete sub task" + ln +
-                        "Enter title for new task: " + ln +
-                        "Task One 1" + ln +
-                        "----Sub Task Two 1.1" + ln +
-                        "--------Sub Task One 1.1.1" + ln +
-                        "--------Sub Task Three 1.1.2" + ln +
-                        "----New Title 1.2" + ln +
-                        "Exit? Yes/No" + ln ;
+                "Task One 1"
+                        + ln + "----Sub Task Two 1.1"
+                        + ln + "--------Sub Task One 1.1.1"
+                        + ln + "--------Sub Task Three 1.1.2"
+                        + ln + "Select task:"
+                        + ln + "Enter command:"
+                        + ln + "0 - next"
+                        + ln + "1 - rename current task"
+                        + ln + "2 - add sub task"
+                        + ln + "3 - delete sub task"
+                        + ln + "Enter title for new task: "
+                        + ln + "Task One 1"
+                        + ln + "----Sub Task Two 1.1"
+                        + ln + "--------Sub Task One 1.1.1"
+                        + ln + "--------Sub Task Three 1.1.2"
+                        + ln + "----New Title 1.2"
+                        + ln + "Exit? Yes/No"
+                        + ln;
         assertEquals(string, bytes.toString());
     }
 
@@ -100,19 +102,20 @@ public class MenuTest {
         menu.setInput(stub);
         menu.run();
         String string =
-                "Task One 1" + ln +
-                        "----Sub Task Two 1.1" + ln +
-                        "--------Sub Task One 1.1.1" + ln +
-                        "--------Sub Task Three 1.1.2" + ln +
-                        "Select task:" + ln +
-                        "Enter command:" + ln +
-                        "0 - next" + ln +
-                        "1 - rename current task" + ln +
-                        "2 - add sub task" + ln +
-                        "3 - delete sub task" + ln +
-                        "Enter index task for delete: " + ln +
-                        "Task One 1" + ln +
-                        "Exit? Yes/No" + ln ;
+                "Task One 1"
+                        + ln + "----Sub Task Two 1.1"
+                        + ln + "--------Sub Task One 1.1.1"
+                        + ln + "--------Sub Task Three 1.1.2"
+                        + ln + "Select task:"
+                        + ln + "Enter command:"
+                        + ln + "0 - next"
+                        + ln + "1 - rename current task"
+                        + ln + "2 - add sub task"
+                        + ln + "3 - delete sub task"
+                        + ln + "Enter index task for delete: "
+                        + ln + "Task One 1"
+                        + ln + "Exit? Yes/No"
+                        + ln;
         assertEquals(string, bytes.toString());
     }
 
@@ -132,21 +135,22 @@ public class MenuTest {
         menu.setInput(stub);
         menu.run();
         String string =
-                "Task One 1" + ln +
-                        "----Sub Task Two 1.1" + ln +
-                        "--------Sub Task One 1.1.1" + ln +
-                        "--------Sub Task Three 1.1.2" + ln +
-                        "Select task:" + ln +
-                        "Enter command:" + ln +
-                        "0 - next" + ln +
-                        "1 - rename current task" + ln +
-                        "2 - add sub task" + ln +
-                        "3 - delete sub task" + ln +
-                        "Task One 1" + ln +
-                        "----Sub Task Two 1.1" + ln +
-                        "--------Sub Task One 1.1.1" + ln +
-                        "--------Sub Task Three 1.1.2" + ln +
-                        "Exit? Yes/No" + ln ;
+                "Task One 1"
+                        + ln + "----Sub Task Two 1.1"
+                        + ln + "--------Sub Task One 1.1.1"
+                        + ln + "--------Sub Task Three 1.1.2"
+                        + ln + "Select task:"
+                        + ln + "Enter command:"
+                        + ln + "0 - next"
+                        + ln + "1 - rename current task"
+                        + ln + "2 - add sub task"
+                        + ln + "3 - delete sub task"
+                        + ln + "Task One 1"
+                        + ln + "----Sub Task Two 1.1"
+                        + ln + "--------Sub Task One 1.1.1"
+                        + ln + "--------Sub Task Three 1.1.2"
+                        + ln + "Exit? Yes/No"
+                        + ln;
         assertEquals(string, bytes.toString());
     }
 }

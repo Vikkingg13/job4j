@@ -1,3 +1,5 @@
+/*
+*TODO
 package ru.job4j.design.tdd;
 
 import org.junit.Test;
@@ -71,3 +73,4 @@ public class CinemaTest {
         assertEquals(sessions, Collections.emptyList());
     }
 }
+ */
